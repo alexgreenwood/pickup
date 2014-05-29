@@ -1,0 +1,53 @@
+<div class="page-header">
+  <h1>Add Invite</h1>
+</div>
+
+<% if @invite.errors.any? %>
+  <% @invite.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<form action="/create_invite" class="form-horizontal">
+  <!-- Label and input for rsvp -->
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label for="rsvp">
+          <input type="checkbox" id="rsvp" name="rsvp" value="1" <%= "checked" if @invite.rsvp %>>
+          Rsvp
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label and input for game_id -->
+  <div class="form-group">
+    <label for="game_id" class="col-sm-2 control-label">
+      Game
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="game_id" name="game_id" placeholder="Game" class="form-control" value="<%= @invite.game_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for user_id -->
+  <div class="form-group">
+    <label for="user_id" class="col-sm-2 control-label">
+      User
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @invite.user_id %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Invite" class="btn btn-primary">
+    </div>
+  </div>
+</form>

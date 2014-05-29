@@ -1,4 +1,55 @@
 Rails.application.routes.draw do
+  # Routes for the Sport resource:
+  # CREATE
+  get('/sports/new', { :controller => 'sports', :action => 'new' })
+  get('/create_sport', { :controller => 'sports', :action => 'create' })
+
+  # READ
+  get('/sports', { :controller => 'sports', :action => 'index' })
+  get('/sports/:id', { :controller => 'sports', :action => 'show' })
+
+  # UPDATE
+  get('/sports/:id/edit', { :controller => 'sports', :action => 'edit' })
+  get('/update_sport/:id', { :controller => 'sports', :action => 'update' })
+
+  # DELETE
+  get('/delete_sport/:id', { :controller => 'sports', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Invite resource:
+  # CREATE
+  get('/invites/new', { :controller => 'invites', :action => 'new' })
+  get('/create_invite', { :controller => 'invites', :action => 'create' })
+
+  # READ
+  get('/invites', { :controller => 'invites', :action => 'index' })
+  get('/invites/:id', { :controller => 'invites', :action => 'show' })
+
+  # UPDATE
+  get('/invites/:id/edit', { :controller => 'invites', :action => 'edit' })
+  get('/update_invite/:id', { :controller => 'invites', :action => 'update' })
+
+  # DELETE
+  get('/delete_invite/:id', { :controller => 'invites', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Game resource:
+  # CREATE
+  get('/games/new', { :controller => 'games', :action => 'new' })
+  get('/create_game', { :controller => 'games', :action => 'create' })
+
+  # READ
+  get('/games', { :controller => 'games', :action => 'index' })
+  get('/games/:id', { :controller => 'games', :action => 'show' })
+
+  # UPDATE
+  get('/games/:id/edit', { :controller => 'games', :action => 'edit' })
+  get('/update_game/:id', { :controller => 'games', :action => 'update' })
+
+  # DELETE
+  get('/delete_game/:id', { :controller => 'games', :action => 'destroy' })
+  #------------------------------
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
