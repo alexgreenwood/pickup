@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  root 'games#index'
+
   # Routes for the Sport resource:
   # CREATE
   get('/sports/new', { :controller => 'sports', :action => 'new' })
