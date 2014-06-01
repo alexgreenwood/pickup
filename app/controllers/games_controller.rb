@@ -55,7 +55,7 @@ class GamesController < ApplicationController
   end
 
   def my_games
-    @game = Game.all
+    @games = Game.all
   end
 
 

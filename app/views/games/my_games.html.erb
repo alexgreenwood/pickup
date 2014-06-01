@@ -1,1 +1,15 @@
 <h1> My Games </h1>
+
+<tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.user_id %></td>
+        <td><%= game.location %></td>
+        <td><%= game.time %></td>
+        <td><%= game.date %></td>
+        <td><%= game.sport %></td>
+        <td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
