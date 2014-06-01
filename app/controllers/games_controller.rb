@@ -56,6 +56,7 @@ class GamesController < ApplicationController
 
   def my_games
     @games = Game.all
+    render 'index'
   end
 
 
