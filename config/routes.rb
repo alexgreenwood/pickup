@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   # READ
   get('/games', { :controller => 'games', :action => 'index' })
   get('/games/:id', { :controller => 'games', :action => 'show' })
+  get('/my_games', { :controller => 'games', :action => 'my_games' })
 
   # UPDATE
   get('/games/:id/edit', { :controller => 'games', :action => 'edit' })

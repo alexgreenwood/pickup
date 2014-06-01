@@ -53,4 +53,12 @@ class GamesController < ApplicationController
 
     redirect_to "/games", :notice => "Game deleted."
   end
+
+  def my_games
+    @game = Game.all
+  end
+
+
+
+
 end
