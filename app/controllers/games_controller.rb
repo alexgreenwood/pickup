@@ -13,7 +13,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new
-    @game.user_id = params[:user_id]
+    @game.user_id = current_user.id
     @game.location = params[:location]
     @game.time = params[:time]
     @game.date = params[:date]
@@ -33,7 +33,7 @@ class GamesController < ApplicationController
   def update
     @game = Game.find(params[:id])
 
-    @game.user_id = params[:user_id]
+    @game.user_id = current_user.id
     @game.location = params[:location]
     @game.time = params[:time]
     @game.date = params[:date]
@@ -55,7 +55,7 @@ class GamesController < ApplicationController
   end
 
   def my_games
-    @games = Game.all
+    @games = current_user.games
     render 'index'
   end
 
