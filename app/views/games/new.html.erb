@@ -77,7 +77,7 @@
       Players
     </label>
     <div class="col-sm-9">
-       <select class="form-control" name="user_id" id="select">
+       <select multiple="" class="form-control" name="user_id" id="select">
       <%= @users.each do |user| %>
         <option value="<%= user.id %>"><%= user.id %></option>
       <% end %>
