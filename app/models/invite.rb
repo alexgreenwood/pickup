@@ -2,7 +2,7 @@ class Invite < ActiveRecord::Base
 
 belongs_to :user
 
-has_many :games
+belongs_to :game
 
 has_many :participants, :class_name => "User"
 

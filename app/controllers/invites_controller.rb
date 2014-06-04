@@ -18,10 +18,11 @@ class InvitesController < ApplicationController
     @invite.user_id = current_user.id
 
     if @invite.save
-      redirect_to "/invites", :notice => "Invite created successfully."
+      redirect_to "/games/#{@invite.game_id}", :notice => "RSVP successful"
     else
       render 'new'
     end
+
   end
 
   def edit
