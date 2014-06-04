@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'games#index'
+  root 'games#my_games'
 
   # Routes for the Sport resource:
   # CREATE
