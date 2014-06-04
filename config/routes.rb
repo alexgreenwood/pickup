@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   # READ
   get('/invites', { :controller => 'invites', :action => 'index' })
   get('/invites/:id', { :controller => 'invites', :action => 'show' })
+  get('/my_invites', { :controller => 'invites', :action => 'my_invites' })
 
   # UPDATE
   get('/invites/:id/edit', { :controller => 'invites', :action => 'edit' })
