@@ -55,20 +55,37 @@
     <label for="sport" class="col-sm-2 control-label">
       Sport
     </label>
-    <div class="col-sm-10">
-      <input type="text" id="sport" name="sport" placeholder="Sport" class="form-control" value="<%= @game.sport %>">
+    <div class="form-group">
+      <div class="col-sm-9">
+        <select class="form-control" name="sport" id="select" value="<%= @game.sport %>">
+          <option>Baseball</option>
+          <option>Basketball</option>
+          <option>Catch</option>
+          <option>Cricket</option>
+          <option>Football</option>
+          <option>Futbol</option>
+          <option>Hockey</option>
+          <option>Softball</option>
+          <option>Spikeball</option>
+        </select>
     </div>
   </div>
 
   <!-- Label and input for players -->
   <div class="form-group">
-    <label for="Players" class="col-sm-2 control-label">
+    <label for="players" class="col-sm-2 control-label">
       Players
     </label>
-    <div class="col-sm-10">
-      <input type="text" id="players" name="players" placeholder="Who do you want to invite?" class="form-control" >
+    <div class="col-sm-9">
+       <select class="form-control" name="user_id" id="select">
+      <%= @users.each do |user| %>
+        <option value="<%= user.id %>"><%= user.id %></option>
+      <% end %>
+    </select>
     </div>
   </div>
+
+
 
 
 
