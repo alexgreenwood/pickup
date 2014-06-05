@@ -86,6 +86,17 @@
         <option value="<%= user.id %>"><%= user.id %></option>
       <% end %>
     </select>
+
+    <% @users.each_with_index do |user, i| %>
+      <label for="player_<%= i %>">User<%= i %></label>
+      <input type="checkbox" name="player_<%= i%>" value="1">
+
+    <% end %>
+
+
+
+
+
     </div>
   </div>
 

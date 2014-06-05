@@ -21,6 +21,15 @@ class GamesController < ApplicationController
     @game.date = params[:date]
     @game.sport = params[:sport]
 
+    @users = User.all
+    @users.each do |user|
+      if params["player_#{user.id}"].present?
+        i = Invite.new
+
+
+      end
+    end
+
     if @game.save
       redirect_to "/my_games", :notice => "Game created successfully."
     else

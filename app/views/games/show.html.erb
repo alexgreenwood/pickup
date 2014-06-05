@@ -20,17 +20,19 @@
 
   <dt>Rsvp</dt>
 
-  <a href="/create_invite?game_id=<%= @game.id %>&user_id=<%= current_user.id %>&rsvp=<%= true  %>" class="btn btn-success">I'm in!</a>
+  <% invite = @game.invites.find_by(:user_id => current_user.id) %>
+  <% if invite.present? %>
+  <a href="/update_invite/<%= invite.id %>?rsvp=<%= true %>" class="btn btn-success">I'm in!</a>
+  <% end %>
 
-  <a href="/create_invite?game_id=<%= @game.id %>&user_id=<%= current_user.id %>&rsvp=<%= false  %>" class="btn btn-danger">Can't make it.</a>
 
   <dt>Players</dt>
   <dd><%= @game.user_id %></dd>
 
 
   <% @game.players.each do |player| %>
-        <dd value="<%= player.id %>"><%= player.id %></dd>
-      <% end %>
+      <dd value="<%= player.id %>"><%= player.id %></dd>
+  <% end %>
 
 
 
