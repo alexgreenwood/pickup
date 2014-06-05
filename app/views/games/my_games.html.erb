@@ -1,5 +1,7 @@
 <h1> My Games </h1>
 
+
+<h3> Games I'm organizing </h3>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -41,6 +43,22 @@
     <% end %>
   </tbody>
 
+</table>
+
+<h3> Games I'm playing in </h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Organizer</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Sport</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 <tbody>
     <% @games_in.each do |game_in| %>
       <tr>
