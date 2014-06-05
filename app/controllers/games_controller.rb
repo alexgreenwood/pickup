@@ -22,7 +22,7 @@ class GamesController < ApplicationController
     @game.sport = params[:sport]
 
     if @game.save
-      redirect_to "/games", :notice => "Game created successfully."
+      redirect_to "/my_games", :notice => "Game created successfully."
     else
       render 'new'
     end
@@ -42,7 +42,7 @@ class GamesController < ApplicationController
     @game.sport = params[:sport]
 
     if @game.save
-      redirect_to "/games", :notice => "Game updated successfully."
+      redirect_to "/my_games", :notice => "Game updated successfully."
     else
       render 'edit'
     end
@@ -59,6 +59,8 @@ class GamesController < ApplicationController
   def my_games
     @games = current_user.games
     @games_in = current_user.rsvps
+    @games_to_reply_to = current_user.invites
+
   end
 
 
