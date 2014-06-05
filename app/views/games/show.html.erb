@@ -28,7 +28,7 @@
   <dd><%= @game.user_id %></dd>
 
 
-  <% @players.each do |player| %>
+  <% @game.players.each do |player| %>
         <dd value="<%= player.id %>"><%= player.id %></dd>
       <% end %>
 
