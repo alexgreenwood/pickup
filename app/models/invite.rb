@@ -1,7 +1,8 @@
 class Invite < ActiveRecord::Base
 
-belongs_to :user
+  belongs_to :user
 
-belongs_to :game
+  belongs_to :game
+
 
 end

@@ -1,6 +1,20 @@
 <h1> My Games </h1>
 
-<tbody>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Organizer</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Sport</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
     <% @games.each do |game| %>
       <tr>
         <td><%= game.user_id %></td>
@@ -8,7 +22,6 @@
         <td><%= game.time %></td>
         <td><%= game.date %></td>
         <td><%= game.sport %></td>
-        <td>
         <td>
           <a href="/games/<%= game.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
@@ -27,4 +40,26 @@
       </tr>
     <% end %>
   </tbody>
+
+<tbody>
+    <% @games_in.each do |game_in| %>
+      <tr>
+        <td><%= game_in.user_id %></td>
+        <td><%= game_in.location %></td>
+        <td><%= game_in.time %></td>
+        <td><%= game_in.date %></td>
+        <td><%= game_in.sport %></td>
+        <td>
+          <a href="/games/<%= game_in.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+
+
+
 </table>
+

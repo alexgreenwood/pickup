@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :invites
 
+  has_many :rsvps, :through => :invites, :source => :game
 
 
 end

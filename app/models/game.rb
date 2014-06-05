@@ -4,6 +4,9 @@ class Game < ActiveRecord::Base
 
   has_many :players, :through => :invites, :source => :user
 
-  has_many :invites
 
+
+  has_many :invites
 end
+
+

@@ -58,7 +58,7 @@ class GamesController < ApplicationController
 
   def my_games
     @games = current_user.games
-    render 'index'
+    @games_in = current_user.rsvps
   end
 
 
