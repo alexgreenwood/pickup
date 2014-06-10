@@ -87,23 +87,13 @@
   <thead>
     <tr>
       <th>Organizer</th>
-      <th>Location</th>
-      <th>Time</th>
-      <th>Date</th>
-      <th>Sport</th>
-      <th></th>
-      <th></th>
-      <th></th>
+
     </tr>
   </thead>
 <tbody>
     <% @games_to_reply_to.each do |game_to_reply_to| %>
       <tr>
         <td><%= game_to_reply_to.user_id %></td>
-        <td><%= game_to_reply_to.location %></td>
-        <td><%= game_to_reply_to.time %></td>
-        <td><%= game_to_reply_to.date %></td>
-        <td><%= game_to_reply_to.sport %></td>
         <td>
           <a href="/games/<%= game_to_reply_to.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
