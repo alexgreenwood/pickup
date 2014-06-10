@@ -81,11 +81,6 @@
       Players
     </label>
     <div class="col-sm-9">
-       <select multiple="" class="form-control" name="user_id" id="select">
-      <%= @users.each do |user| %>
-        <option value="<%= user.id %>"><%= user.id %></option>
-      <% end %>
-    </select>
 
     <% @users.each_with_index do |user, i| %>
       <label for="player_<%= i %>">User<%= i %></label>
